@@ -1,0 +1,1563 @@
+mode: rule
+mixed-port: 7897
+socks-port: 7898
+port: 7899
+allow-lan: false
+log-level: info
+ipv6: false
+secret: ''
+external-controller: 127.0.0.1:9097
+bind-address: '*'
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  fallback:
+  - https://doh.dns.sb/dns-query
+  - https://dns.cloudflare.com/dns-query
+  - https://dns.twnic.tw/dns-query
+  - tls://8.8.4.4:853
+  fallback-filter:
+    geoip: true
+    ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+  fake-ip-filter:
+  - dns.msftncsi.com
+  - www.msftncsi.com
+  - www.msftconnecttest.com
+tun:
+  stack: gvisor
+  device: Meta
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+  - any:53
+  strict-route: true
+  mtu: 9000
+  enable: true
+proxies:
+- name: 剩余流量：12491.03 GB
+  type: ss
+  server: aa01hk.78787878.top
+  port: 48590
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 距离下次重置剩余：25 天
+  type: ss
+  server: aa01hk.78787878.top
+  port: 48590
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 套餐到期：2024-05-14
+  type: ss
+  server: aa01hk.78787878.top
+  port: 48590
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 官网发布页：m78星云.com
+  type: ss
+  server: aa01hk.78787878.top
+  port: 48590
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇭🇰香港01｜x0.75
+  type: ss
+  server: aa01hk.78787878.top
+  port: 48590
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇭🇰香港02
+  type: ss
+  server: aa02hk.78787878.top
+  port: 48591
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇭🇰香港03
+  type: ss
+  server: aa03hk.78787878.top
+  port: 48591
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇭🇰香港Premium01｜x2
+  type: ss
+  server: ss01hk.78787878.top
+  port: 48591
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇭🇰香港Premium02｜x2
+  type: ss
+  server: ss02hk.78787878.top
+  port: 48591
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇭🇰升级套餐获取IEPL游戏专线
+  type: ss
+  server: 123.top
+  port: 1000
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇸🇬新加坡01｜x0.75
+  type: ss
+  server: aa01sg.78787878.top
+  port: 32094
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇸🇬新加坡02
+  type: ss
+  server: aa02sg.78787878.top
+  port: 32095
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇸🇬新加坡03
+  type: ss
+  server: aa03sg.78787878.top
+  port: 32095
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇸🇬新加坡Premium01｜x2
+  type: ss
+  server: ss01sg.78787878.top
+  port: 32095
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇸🇬新加坡Premium02｜x2
+  type: ss
+  server: ss02sg.78787878.top
+  port: 32095
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇨🇳台湾01｜x0.75
+  type: ss
+  server: aa01tw.78787878.top
+  port: 25162
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇨🇳台湾02
+  type: ss
+  server: aa02tw.78787878.top
+  port: 25163
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇨🇳台湾03
+  type: ss
+  server: aa03tw.78787878.top
+  port: 25163
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇨🇳台湾Premium01｜x2
+  type: ss
+  server: ss01tw.78787878.top
+  port: 25163
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇨🇳台湾Premium02｜x2
+  type: ss
+  server: ss02tw.78787878.top
+  port: 25163
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇯🇵日本01｜x0.75
+  type: ss
+  server: aa01jp.78787878.top
+  port: 35062
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇯🇵日本02
+  type: ss
+  server: aa02jp.78787878.top
+  port: 35063
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇯🇵日本03
+  type: ss
+  server: aa03jp.78787878.top
+  port: 35063
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇯🇵日本Premium01｜x2
+  type: ss
+  server: ss01jp.78787878.top
+  port: 35063
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇯🇵日本Premium02｜x2
+  type: ss
+  server: ss02jp.78787878.top
+  port: 35063
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇺🇸美国01｜x0.75
+  type: ss
+  server: aa01us.78787878.top
+  port: 35734
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇺🇸美国02
+  type: ss
+  server: aa02us.78787878.top
+  port: 35735
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇺🇸美国Premium01｜x2
+  type: ss
+  server: ss01us.78787878.top
+  port: 35735
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇺🇸美国Premium02｜x2
+  type: ss
+  server: ss02us.78787878.top
+  port: 35735
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇰🇷韩国
+  type: ss
+  server: aa02rare.78787878.top
+  port: 38463
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇦🇶南极 可改B站IP
+  type: ss
+  server: aa01rare.78787878.top
+  port: 30549
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇦🇷阿根廷
+  type: ss
+  server: aa01rare.78787878.top
+  port: 30551
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇪🇬埃及
+  type: ss
+  server: aa01rare.78787878.top
+  port: 18087
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇹🇷土耳其
+  type: ss
+  server: ss02rare.78787878.top
+  port: 31475
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇺🇦乌克兰
+  type: ss
+  server: ss03rare.78787878.top
+  port: 25080
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇫🇷法国
+  type: ss
+  server: ss03rare.78787878.top
+  port: 27734
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇩🇰丹麦
+  type: ss
+  server: ss01rare.78787878.top
+  port: 48729
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇩🇪德国
+  type: ss
+  server: ss03rare.78787878.top
+  port: 35919
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇲🇾马来西亚
+  type: ss
+  server: ss03rare.78787878.top
+  port: 38599
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇳🇱荷兰
+  type: ss
+  server: ss01rare.78787878.top
+  port: 12267
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇳🇬尼日利亚
+  type: ss
+  server: ss02rare.78787878.top
+  port: 31923
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇹🇭泰国
+  type: ss
+  server: aa01rare.78787878.top
+  port: 29790
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇷🇺俄罗斯
+  type: ss
+  server: aa02rare.78787878.top
+  port: 39044
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇮🇩印度尼西亚
+  type: ss
+  server: aa02rare.78787878.top
+  port: 20748
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇻🇳越南｜印度
+  type: ss
+  server: aa02rare.78787878.top
+  port: 41861
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇵🇭菲律宾｜x2
+  type: ss
+  server: aa02rare.78787878.top
+  port: 34136
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+- name: 🇲🇴澳门
+  type: ss
+  server: aa02rare.78787878.top
+  port: 41708
+  cipher: chacha20-ietf-poly1305
+  password: d7125d7f-8571-47b4-a565-77352c0f0515
+  udp: true
+proxy-groups:
+- name: M78星云
+  type: select
+  proxies:
+  - 自动选择
+  - 故障转移
+  - 剩余流量：12491.03 GB
+  - 距离下次重置剩余：25 天
+  - 套餐到期：2024-05-14
+  - 官网发布页：m78星云.com
+  - 🇭🇰香港01｜x0.75
+  - 🇭🇰香港02
+  - 🇭🇰香港03
+  - 🇭🇰香港Premium01｜x2
+  - 🇭🇰香港Premium02｜x2
+  - 🇭🇰升级套餐获取IEPL游戏专线
+  - 🇸🇬新加坡01｜x0.75
+  - 🇸🇬新加坡02
+  - 🇸🇬新加坡03
+  - 🇸🇬新加坡Premium01｜x2
+  - 🇸🇬新加坡Premium02｜x2
+  - 🇨🇳台湾01｜x0.75
+  - 🇨🇳台湾02
+  - 🇨🇳台湾03
+  - 🇨🇳台湾Premium01｜x2
+  - 🇨🇳台湾Premium02｜x2
+  - 🇯🇵日本01｜x0.75
+  - 🇯🇵日本02
+  - 🇯🇵日本03
+  - 🇯🇵日本Premium01｜x2
+  - 🇯🇵日本Premium02｜x2
+  - 🇺🇸美国01｜x0.75
+  - 🇺🇸美国02
+  - 🇺🇸美国Premium01｜x2
+  - 🇺🇸美国Premium02｜x2
+  - 🇰🇷韩国
+  - 🇦🇶南极 可改B站IP
+  - 🇦🇷阿根廷
+  - 🇪🇬埃及
+  - 🇹🇷土耳其
+  - 🇺🇦乌克兰
+  - 🇫🇷法国
+  - 🇩🇰丹麦
+  - 🇩🇪德国
+  - 🇲🇾马来西亚
+  - 🇳🇱荷兰
+  - 🇳🇬尼日利亚
+  - 🇹🇭泰国
+  - 🇷🇺俄罗斯
+  - 🇮🇩印度尼西亚
+  - 🇻🇳越南｜印度
+  - 🇵🇭菲律宾｜x2
+  - 🇲🇴澳门
+- name: Netflix
+  type: select
+  proxies:
+  - M78星云
+  - 自动选择
+  - 🇭🇰香港01｜x0.75
+  - 🇭🇰香港02
+  - 🇭🇰香港03
+  - 🇭🇰香港Premium01｜x2
+  - 🇭🇰香港Premium02｜x2
+  - 🇸🇬新加坡01｜x0.75
+  - 🇸🇬新加坡02
+  - 🇸🇬新加坡03
+  - 🇸🇬新加坡Premium01｜x2
+  - 🇸🇬新加坡Premium02｜x2
+  - 🇨🇳台湾01｜x0.75
+  - 🇨🇳台湾02
+  - 🇨🇳台湾03
+  - 🇨🇳台湾Premium01｜x2
+  - 🇨🇳台湾Premium02｜x2
+  - 🇯🇵日本01｜x0.75
+  - 🇯🇵日本02
+  - 🇯🇵日本03
+  - 🇯🇵日本Premium01｜x2
+  - 🇯🇵日本Premium02｜x2
+  - 🇺🇸美国01｜x0.75
+  - 🇺🇸美国02
+  - 🇺🇸美国Premium01｜x2
+  - 🇺🇸美国Premium02｜x2
+  - 🇰🇷韩国
+  - 🇪🇬埃及
+  - 🇹🇷土耳其
+  - 🇳🇬尼日利亚
+- name: Disney+
+  type: select
+  proxies:
+  - M78星云
+  - 自动选择
+  - 🇭🇰香港01｜x0.75
+  - 🇭🇰香港02
+  - 🇭🇰香港03
+  - 🇭🇰香港Premium01｜x2
+  - 🇭🇰香港Premium02｜x2
+  - 🇸🇬新加坡01｜x0.75
+  - 🇸🇬新加坡02
+  - 🇸🇬新加坡03
+  - 🇸🇬新加坡Premium01｜x2
+  - 🇸🇬新加坡Premium02｜x2
+  - 🇨🇳台湾01｜x0.75
+  - 🇨🇳台湾02
+  - 🇨🇳台湾03
+  - 🇨🇳台湾Premium01｜x2
+  - 🇨🇳台湾Premium02｜x2
+  - 🇯🇵日本01｜x0.75
+  - 🇯🇵日本02
+  - 🇯🇵日本03
+  - 🇯🇵日本Premium01｜x2
+  - 🇯🇵日本Premium02｜x2
+  - 🇺🇸美国01｜x0.75
+  - 🇺🇸美国02
+  - 🇺🇸美国Premium01｜x2
+  - 🇺🇸美国Premium02｜x2
+- name: Telegram
+  type: select
+  proxies:
+  - M78星云
+  - 自动选择
+  - 🇭🇰香港01｜x0.75
+  - 🇭🇰香港02
+  - 🇭🇰香港03
+  - 🇭🇰香港Premium01｜x2
+  - 🇭🇰香港Premium02｜x2
+  - 🇸🇬新加坡01｜x0.75
+  - 🇸🇬新加坡02
+  - 🇸🇬新加坡03
+  - 🇸🇬新加坡Premium01｜x2
+  - 🇸🇬新加坡Premium02｜x2
+  - 🇨🇳台湾01｜x0.75
+  - 🇨🇳台湾02
+  - 🇨🇳台湾03
+  - 🇨🇳台湾Premium01｜x2
+  - 🇨🇳台湾Premium02｜x2
+  - 🇯🇵日本01｜x0.75
+  - 🇯🇵日本02
+  - 🇯🇵日本03
+  - 🇯🇵日本Premium01｜x2
+  - 🇯🇵日本Premium02｜x2
+  - 🇺🇸美国01｜x0.75
+  - 🇺🇸美国02
+  - 🇺🇸美国Premium01｜x2
+  - 🇺🇸美国Premium02｜x2
+- name: ChatGPT
+  type: select
+  proxies:
+  - M78星云
+  - 自动选择
+  - 🇭🇰香港01｜x0.75
+  - 🇭🇰香港02
+  - 🇭🇰香港03
+  - 🇭🇰香港Premium01｜x2
+  - 🇭🇰香港Premium02｜x2
+  - 🇸🇬新加坡01｜x0.75
+  - 🇸🇬新加坡02
+  - 🇸🇬新加坡03
+  - 🇸🇬新加坡Premium01｜x2
+  - 🇸🇬新加坡Premium02｜x2
+  - 🇨🇳台湾01｜x0.75
+  - 🇨🇳台湾02
+  - 🇨🇳台湾03
+  - 🇨🇳台湾Premium01｜x2
+  - 🇨🇳台湾Premium02｜x2
+  - 🇯🇵日本01｜x0.75
+  - 🇯🇵日本02
+  - 🇯🇵日本03
+  - 🇯🇵日本Premium01｜x2
+  - 🇯🇵日本Premium02｜x2
+  - 🇺🇸美国01｜x0.75
+  - 🇺🇸美国02
+  - 🇺🇸美国Premium01｜x2
+  - 🇺🇸美国Premium02｜x2
+- name: YouTube
+  type: select
+  proxies:
+  - M78星云
+  - 自动选择
+  - 🇭🇰香港01｜x0.75
+  - 🇭🇰香港02
+  - 🇭🇰香港03
+  - 🇭🇰香港Premium01｜x2
+  - 🇭🇰香港Premium02｜x2
+  - 🇸🇬新加坡01｜x0.75
+  - 🇸🇬新加坡02
+  - 🇸🇬新加坡03
+  - 🇸🇬新加坡Premium01｜x2
+  - 🇸🇬新加坡Premium02｜x2
+  - 🇨🇳台湾01｜x0.75
+  - 🇨🇳台湾02
+  - 🇨🇳台湾03
+  - 🇨🇳台湾Premium01｜x2
+  - 🇨🇳台湾Premium02｜x2
+  - 🇯🇵日本01｜x0.75
+  - 🇯🇵日本02
+  - 🇯🇵日本03
+  - 🇯🇵日本Premium01｜x2
+  - 🇯🇵日本Premium02｜x2
+  - 🇺🇸美国01｜x0.75
+  - 🇺🇸美国02
+  - 🇺🇸美国Premium01｜x2
+  - 🇺🇸美国Premium02｜x2
+- name: Tiktok
+  type: select
+  proxies:
+  - M78星云
+  - 自动选择
+  - 🇭🇰香港01｜x0.75
+  - 🇭🇰香港02
+  - 🇭🇰香港03
+  - 🇭🇰香港Premium01｜x2
+  - 🇭🇰香港Premium02｜x2
+  - 🇸🇬新加坡01｜x0.75
+  - 🇸🇬新加坡02
+  - 🇸🇬新加坡03
+  - 🇸🇬新加坡Premium01｜x2
+  - 🇸🇬新加坡Premium02｜x2
+  - 🇨🇳台湾01｜x0.75
+  - 🇨🇳台湾02
+  - 🇨🇳台湾03
+  - 🇨🇳台湾Premium01｜x2
+  - 🇨🇳台湾Premium02｜x2
+  - 🇯🇵日本01｜x0.75
+  - 🇯🇵日本02
+  - 🇯🇵日本03
+  - 🇯🇵日本Premium01｜x2
+  - 🇯🇵日本Premium02｜x2
+  - 🇺🇸美国01｜x0.75
+  - 🇺🇸美国02
+  - 🇺🇸美国Premium01｜x2
+  - 🇺🇸美国Premium02｜x2
+- name: Spotify
+  type: select
+  proxies:
+  - M78星云
+  - 自动选择
+  - 剩余流量：12491.03 GB
+  - 距离下次重置剩余：25 天
+  - 套餐到期：2024-05-14
+  - 官网发布页：m78星云.com
+  - 🇭🇰香港01｜x0.75
+  - 🇭🇰香港02
+  - 🇭🇰香港03
+  - 🇭🇰香港Premium01｜x2
+  - 🇭🇰香港Premium02｜x2
+  - 🇭🇰升级套餐获取IEPL游戏专线
+  - 🇸🇬新加坡01｜x0.75
+  - 🇸🇬新加坡02
+  - 🇸🇬新加坡03
+  - 🇸🇬新加坡Premium01｜x2
+  - 🇸🇬新加坡Premium02｜x2
+  - 🇨🇳台湾01｜x0.75
+  - 🇨🇳台湾02
+  - 🇨🇳台湾03
+  - 🇨🇳台湾Premium01｜x2
+  - 🇨🇳台湾Premium02｜x2
+  - 🇯🇵日本01｜x0.75
+  - 🇯🇵日本02
+  - 🇯🇵日本03
+  - 🇯🇵日本Premium01｜x2
+  - 🇯🇵日本Premium02｜x2
+  - 🇺🇸美国01｜x0.75
+  - 🇺🇸美国02
+  - 🇺🇸美国Premium01｜x2
+  - 🇺🇸美国Premium02｜x2
+  - 🇰🇷韩国
+  - 🇦🇶南极 可改B站IP
+  - 🇦🇷阿根廷
+  - 🇪🇬埃及
+  - 🇹🇷土耳其
+  - 🇺🇦乌克兰
+  - 🇫🇷法国
+  - 🇩🇰丹麦
+  - 🇩🇪德国
+  - 🇲🇾马来西亚
+  - 🇳🇱荷兰
+  - 🇳🇬尼日利亚
+  - 🇹🇭泰国
+  - 🇷🇺俄罗斯
+  - 🇮🇩印度尼西亚
+  - 🇻🇳越南｜印度
+  - 🇵🇭菲律宾｜x2
+  - 🇲🇴澳门
+- name: 自动选择
+  type: url-test
+  proxies:
+  - 🇭🇰香港01｜x0.75
+  - 🇭🇰香港02
+  - 🇭🇰香港03
+  - 🇭🇰香港Premium01｜x2
+  - 🇭🇰香港Premium02｜x2
+  - 🇸🇬新加坡01｜x0.75
+  - 🇸🇬新加坡02
+  - 🇸🇬新加坡03
+  - 🇸🇬新加坡Premium01｜x2
+  - 🇸🇬新加坡Premium02｜x2
+  - 🇨🇳台湾01｜x0.75
+  - 🇨🇳台湾02
+  - 🇨🇳台湾03
+  - 🇨🇳台湾Premium01｜x2
+  - 🇨🇳台湾Premium02｜x2
+  - 🇯🇵日本01｜x0.75
+  - 🇯🇵日本02
+  - 🇯🇵日本03
+  - 🇯🇵日本Premium01｜x2
+  - 🇯🇵日本Premium02｜x2
+  - 🇺🇸美国01｜x0.75
+  - 🇺🇸美国02
+  - 🇺🇸美国Premium01｜x2
+  - 🇺🇸美国Premium02｜x2
+  url: http://www.gstatic.com/generate_204
+  interval: 86400
+- name: 故障转移
+  type: fallback
+  proxies:
+  - 剩余流量：12491.03 GB
+  - 距离下次重置剩余：25 天
+  - 套餐到期：2024-05-14
+  - 官网发布页：m78星云.com
+  - 🇭🇰香港01｜x0.75
+  - 🇭🇰香港02
+  - 🇭🇰香港03
+  - 🇭🇰香港Premium01｜x2
+  - 🇭🇰香港Premium02｜x2
+  - 🇭🇰升级套餐获取IEPL游戏专线
+  - 🇸🇬新加坡01｜x0.75
+  - 🇸🇬新加坡02
+  - 🇸🇬新加坡03
+  - 🇸🇬新加坡Premium01｜x2
+  - 🇸🇬新加坡Premium02｜x2
+  - 🇨🇳台湾01｜x0.75
+  - 🇨🇳台湾02
+  - 🇨🇳台湾03
+  - 🇨🇳台湾Premium01｜x2
+  - 🇨🇳台湾Premium02｜x2
+  - 🇯🇵日本01｜x0.75
+  - 🇯🇵日本02
+  - 🇯🇵日本03
+  - 🇯🇵日本Premium01｜x2
+  - 🇯🇵日本Premium02｜x2
+  - 🇺🇸美国01｜x0.75
+  - 🇺🇸美国02
+  - 🇺🇸美国Premium01｜x2
+  - 🇺🇸美国Premium02｜x2
+  - 🇰🇷韩国
+  - 🇦🇶南极 可改B站IP
+  - 🇦🇷阿根廷
+  - 🇪🇬埃及
+  - 🇹🇷土耳其
+  - 🇺🇦乌克兰
+  - 🇫🇷法国
+  - 🇩🇰丹麦
+  - 🇩🇪德国
+  - 🇲🇾马来西亚
+  - 🇳🇱荷兰
+  - 🇳🇬尼日利亚
+  - 🇹🇭泰国
+  - 🇷🇺俄罗斯
+  - 🇮🇩印度尼西亚
+  - 🇻🇳越南｜印度
+  - 🇵🇭菲律宾｜x2
+  - 🇲🇴澳门
+  url: http://www.gstatic.com/generate_204
+  interval: 7200
+rules:
+- DOMAIN,sub.7878787878.top,DIRECT
+- DOMAIN-SUFFIX,m78star.cloud,要走代理组
+- DOMAIN-SUFFIX,services.googleapis.cn,要走代理组
+- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,要走代理组
+- DOMAIN-KEYWORD,apiproxy-device-prod-nlb-,Netflix
+- DOMAIN-KEYWORD,dualstack.apiproxy-,Netflix
+- DOMAIN-KEYWORD,netflixdnstest,Netflix
+- DOMAIN,netflix.com.edgesuite.net,Netflix
+- DOMAIN-SUFFIX,fast.com,Netflix
+- DOMAIN-SUFFIX,netflix.com,Netflix
+- DOMAIN-SUFFIX,netflix.net,Netflix
+- DOMAIN-SUFFIX,netflixdnstest0.com,Netflix
+- DOMAIN-SUFFIX,netflixdnstest1.com,Netflix
+- DOMAIN-SUFFIX,netflixdnstest2.com,Netflix
+- DOMAIN-SUFFIX,netflixdnstest3.com,Netflix
+- DOMAIN-SUFFIX,netflixdnstest4.com,Netflix
+- DOMAIN-SUFFIX,netflixdnstest5.com,Netflix
+- DOMAIN-SUFFIX,netflixdnstest6.com,Netflix
+- DOMAIN-SUFFIX,netflixdnstest7.com,Netflix
+- DOMAIN-SUFFIX,netflixdnstest8.com,Netflix
+- DOMAIN-SUFFIX,netflixdnstest9.com,Netflix
+- DOMAIN-SUFFIX,nflxext.com,Netflix
+- DOMAIN-SUFFIX,nflximg.com,Netflix
+- DOMAIN-SUFFIX,nflximg.net,Netflix
+- DOMAIN-SUFFIX,nflxso.net,Netflix
+- DOMAIN-SUFFIX,nflxvideo.net,Netflix
+- IP-CIDR,8.41.4.0/24,Netflix,no-resolve
+- IP-CIDR,23.246.0.0/18,Netflix,no-resolve
+- IP-CIDR,37.77.184.0/21,Netflix,no-resolve
+- IP-CIDR,38.72.126.0/24,Netflix,no-resolve
+- IP-CIDR,45.57.0.0/17,Netflix,no-resolve
+- IP-CIDR,64.120.128.0/17,Netflix,no-resolve
+- IP-CIDR,66.197.128.0/17,Netflix,no-resolve
+- IP-CIDR,69.53.224.0/19,Netflix,no-resolve
+- IP-CIDR,103.87.204.0/22,Netflix,no-resolve
+- IP-CIDR,108.175.32.0/20,Netflix,no-resolve
+- IP-CIDR,185.2.220.0/22,Netflix,no-resolve
+- IP-CIDR,185.9.188.0/22,Netflix,no-resolve
+- IP-CIDR,192.173.64.0/18,Netflix,no-resolve
+- IP-CIDR,198.38.96.0/19,Netflix,no-resolve
+- IP-CIDR,198.45.48.0/20,Netflix,no-resolve
+- IP-CIDR,203.75.84.0/24,Netflix,no-resolve
+- IP-CIDR,207.45.72.0/22,Netflix,no-resolve
+- IP-CIDR,208.75.76.0/22,Netflix,no-resolve
+- DOMAIN-SUFFIX,20thcenturystudios.com.au,Disney+
+- DOMAIN-SUFFIX,20thcenturystudios.com.br,Disney+
+- DOMAIN-SUFFIX,20thcenturystudios.jp,Disney+
+- DOMAIN-SUFFIX,abc-studios.com,Disney+
+- DOMAIN-SUFFIX,abc.com,Disney+
+- DOMAIN-SUFFIX,abcnews.com,Disney+
+- DOMAIN-SUFFIX,abcnews.edgesuite.net,Disney+
+- DOMAIN-SUFFIX,adobedtm.com,Disney+
+- DOMAIN-SUFFIX,adventuresbydisney.com,Disney+
+- DOMAIN-SUFFIX,babble.com,Disney+
+- DOMAIN-SUFFIX,babyzone.com,Disney+
+- DOMAIN-SUFFIX,bam.nr-data.net,Disney+
+- DOMAIN-SUFFIX,bamgrid.com,Disney+
+- DOMAIN-SUFFIX,beautyandthebeastmusical.co.uk,Disney+
+- DOMAIN-SUFFIX,braze.com,Disney+
+- DOMAIN-SUFFIX,cdn.optimizely.com,Disney+
+- DOMAIN-SUFFIX,conviva.com,Disney+
+- DOMAIN-SUFFIX,d9.flashtalking.com,Disney+
+- DOMAIN-SUFFIX,dilcdn.com,Disney+
+- DOMAIN-SUFFIX,disney-asia.com,Disney+
+- DOMAIN-SUFFIX,disney-discount.com,Disney+
+- DOMAIN-SUFFIX,disney-plus.net,Disney+
+- DOMAIN-SUFFIX,disney-portal.my.onetrust.com,Disney+
+- DOMAIN-SUFFIX,disney-studio.com,Disney+
+- DOMAIN-SUFFIX,disney-studio.net,Disney+
+- DOMAIN-SUFFIX,disney.asia,Disney+
+- DOMAIN-SUFFIX,disney.be,Disney+
+- DOMAIN-SUFFIX,disney.bg,Disney+
+- DOMAIN-SUFFIX,disney.ca,Disney+
+- DOMAIN-SUFFIX,disney.ch,Disney+
+- DOMAIN-SUFFIX,disney.co.il,Disney+
+- DOMAIN-SUFFIX,disney.co.jp,Disney+
+- DOMAIN-SUFFIX,disney.co.kr,Disney+
+- DOMAIN-SUFFIX,disney.co.th,Disney+
+- DOMAIN-SUFFIX,disney.co.uk,Disney+
+- DOMAIN-SUFFIX,disney.co.za,Disney+
+- DOMAIN-SUFFIX,disney.com,Disney+
+- DOMAIN-SUFFIX,disney.com.au,Disney+
+- DOMAIN-SUFFIX,disney.com.br,Disney+
+- DOMAIN-SUFFIX,disney.com.hk,Disney+
+- DOMAIN-SUFFIX,disney.com.tw,Disney+
+- DOMAIN-SUFFIX,disney.cz,Disney+
+- DOMAIN-SUFFIX,disney.de,Disney+
+- DOMAIN-SUFFIX,disney.demdex.net,Disney+
+- DOMAIN-SUFFIX,disney.dk,Disney+
+- DOMAIN-SUFFIX,disney.es,Disney+
+- DOMAIN-SUFFIX,disney.fi,Disney+
+- DOMAIN-SUFFIX,disney.fr,Disney+
+- DOMAIN-SUFFIX,disney.gr,Disney+
+- DOMAIN-SUFFIX,disney.hu,Disney+
+- DOMAIN-SUFFIX,disney.id,Disney+
+- DOMAIN-SUFFIX,disney.in,Disney+
+- DOMAIN-SUFFIX,disney.io,Disney+
+- DOMAIN-SUFFIX,disney.it,Disney+
+- DOMAIN-SUFFIX,disney.my,Disney+
+- DOMAIN-SUFFIX,disney.my.sentry.io,Disney+
+- DOMAIN-SUFFIX,disney.nl,Disney+
+- DOMAIN-SUFFIX,disney.no,Disney+
+- DOMAIN-SUFFIX,disney.ph,Disney+
+- DOMAIN-SUFFIX,disney.pl,Disney+
+- DOMAIN-SUFFIX,disney.pt,Disney+
+- DOMAIN-SUFFIX,disney.ro,Disney+
+- DOMAIN-SUFFIX,disney.ru,Disney+
+- DOMAIN-SUFFIX,disney.se,Disney+
+- DOMAIN-SUFFIX,disney.sg,Disney+
+- DOMAIN-SUFFIX,disneyadsales.com,Disney+
+- DOMAIN-SUFFIX,disneyarena.com,Disney+
+- DOMAIN-SUFFIX,disneyaulani.com,Disney+
+- DOMAIN-SUFFIX,disneybaby.com,Disney+
+- DOMAIN-SUFFIX,disneycareers.com,Disney+
+- DOMAIN-SUFFIX,disneychannelonstage.com,Disney+
+- DOMAIN-SUFFIX,disneychannelroadtrip.com,Disney+
+- DOMAIN-SUFFIX,disneycruisebrasil.com,Disney+
+- DOMAIN-SUFFIX,disneyenconcert.com,Disney+
+- DOMAIN-SUFFIX,disneyiejobs.com,Disney+
+- DOMAIN-SUFFIX,disneyinflight.com,Disney+
+- DOMAIN-SUFFIX,disneyinternational.com,Disney+
+- DOMAIN-SUFFIX,disneyinternationalhd.com,Disney+
+- DOMAIN-SUFFIX,disneyjunior.com,Disney+
+- DOMAIN-SUFFIX,disneyjuniortreataday.com,Disney+
+- DOMAIN-SUFFIX,disneylandparis.com,Disney+
+- DOMAIN-SUFFIX,disneylatino.com,Disney+
+- DOMAIN-SUFFIX,disneymagicmoments.co.il,Disney+
+- DOMAIN-SUFFIX,disneymagicmoments.co.uk,Disney+
+- DOMAIN-SUFFIX,disneymagicmoments.co.za,Disney+
+- DOMAIN-SUFFIX,disneymagicmoments.de,Disney+
+- DOMAIN-SUFFIX,disneymagicmoments.es,Disney+
+- DOMAIN-SUFFIX,disneymagicmoments.fr,Disney+
+- DOMAIN-SUFFIX,disneymagicmoments.gen.tr,Disney+
+- DOMAIN-SUFFIX,disneymagicmoments.gr,Disney+
+- DOMAIN-SUFFIX,disneymagicmoments.it,Disney+
+- DOMAIN-SUFFIX,disneymagicmoments.pl,Disney+
+- DOMAIN-SUFFIX,disneymagicmomentsme.com,Disney+
+- DOMAIN-SUFFIX,disneyme.com,Disney+
+- DOMAIN-SUFFIX,disneymeetingsandevents.com,Disney+
+- DOMAIN-SUFFIX,disneymovieinsiders.com,Disney+
+- DOMAIN-SUFFIX,disneymusicpromotion.com,Disney+
+- DOMAIN-SUFFIX,disneynewseries.com,Disney+
+- DOMAIN-SUFFIX,disneynow.com,Disney+
+- DOMAIN-SUFFIX,disneypeoplesurveys.com,Disney+
+- DOMAIN-SUFFIX,disneyplus.bn5x.net,Disney+
+- DOMAIN-SUFFIX,disneyplus.com,Disney+
+- DOMAIN-SUFFIX,disneyplus.com.ssl.sc.omtrdc.net,Disney+
+- DOMAIN-SUFFIX,disneyprivacycenter.com,Disney+
+- DOMAIN-SUFFIX,disneyredirects.com,Disney+
+- DOMAIN-SUFFIX,disneysrivieraresort.com,Disney+
+- DOMAIN-SUFFIX,disneystore.com,Disney+
+- DOMAIN-SUFFIX,disneystreaming.com,Disney+
+- DOMAIN-SUFFIX,disneysubscription.com,Disney+
+- DOMAIN-SUFFIX,disneytermsofuse.com,Disney+
+- DOMAIN-SUFFIX,disneytickets.co.uk,Disney+
+- DOMAIN-SUFFIX,disneyturkiye.com.tr,Disney+
+- DOMAIN-SUFFIX,disneytvajobs.com,Disney+
+- DOMAIN-SUFFIX,disneyworld-go.com,Disney+
+- DOMAIN-SUFFIX,dlp-media.com,Disney+
+- DOMAIN-SUFFIX,dmed.technology,Disney+
+- DOMAIN-SUFFIX,dssott.com,Disney+
+- DOMAIN-SUFFIX,dtci.co,Disney+
+- DOMAIN-SUFFIX,dtci.technology,Disney+
+- DOMAIN-SUFFIX,edgedatg.com,Disney+
+- DOMAIN-SUFFIX,espn.co.uk,Disney+
+- DOMAIN-SUFFIX,espn.com,Disney+
+- DOMAIN-SUFFIX,espn.hb.omtrdc.net,Disney+
+- DOMAIN-SUFFIX,espn.net,Disney+
+- DOMAIN-SUFFIX,espncdn.com,Disney+
+- DOMAIN-SUFFIX,espndotcom.tt.omtrdc.net,Disney+
+- DOMAIN-SUFFIX,espnqa.com,Disney+
+- DOMAIN-SUFFIX,execute-api.us-east-1.amazonaws.com,Disney+
+- DOMAIN-SUFFIX,go-disneyworldgo.com,Disney+
+- DOMAIN-SUFFIX,go.com,Disney+
+- DOMAIN-SUFFIX,hotstar-cdn.net,Disney+
+- DOMAIN-SUFFIX,hotstar-labs.com,Disney+
+- DOMAIN-SUFFIX,hotstar.com,Disney+
+- DOMAIN-SUFFIX,hotstarext.com,Disney+
+- DOMAIN-SUFFIX,hsprepack.akamaized.net,Disney+
+- DOMAIN-SUFFIX,js-agent.newrelic.com,Disney+
+- DOMAIN-SUFFIX,marvel.com,Disney+
+- DOMAIN-SUFFIX,marvel10thanniversary.com,Disney+
+- DOMAIN-SUFFIX,marveldimensionofheroes.com,Disney+
+- DOMAIN-SUFFIX,marvelparty.net,Disney+
+- DOMAIN-SUFFIX,marvelpinball.com,Disney+
+- DOMAIN-SUFFIX,marvelsdoubleagent.com,Disney+
+- DOMAIN-SUFFIX,marvelspotlightplays.com,Disney+
+- DOMAIN-SUFFIX,marvelsuperheroseptember.com,Disney+
+- DOMAIN-SUFFIX,marvelsuperwar.com,Disney+
+- DOMAIN-SUFFIX,mickey.tv,Disney+
+- DOMAIN-SUFFIX,moviesanywhere.com,Disney+
+- DOMAIN-SUFFIX,natgeomaps.com,Disney+
+- DOMAIN-SUFFIX,nationalgeographic.com,Disney+
+- DOMAIN-SUFFIX,nationalgeographicpartners.com,Disney+
+- DOMAIN-SUFFIX,ngeo.com,Disney+
+- DOMAIN-SUFFIX,nomadlandmovie.ch,Disney+
+- DOMAIN-SUFFIX,playmation.com,Disney+
+- DOMAIN-SUFFIX,shopdisney.com,Disney+
+- DOMAIN-SUFFIX,shops-disney.com,Disney+
+- DOMAIN-SUFFIX,sorcerersarena.com,Disney+
+- DOMAIN-SUFFIX,spaindisney.com,Disney+
+- DOMAIN-SUFFIX,star-brasil.com,Disney+
+- DOMAIN-SUFFIX,star-latam.com,Disney+
+- DOMAIN-SUFFIX,starott.com,Disney+
+- DOMAIN-SUFFIX,starplus.com,Disney+
+- DOMAIN-SUFFIX,starwars.com,Disney+
+- DOMAIN-SUFFIX,starwarsgalacticstarcruiser.com,Disney+
+- DOMAIN-SUFFIX,starwarskids.com,Disney+
+- DOMAIN-SUFFIX,streamingdisney.net,Disney+
+- DOMAIN-SUFFIX,themarvelexperiencetour.com,Disney+
+- DOMAIN-SUFFIX,thestationbymaker.com,Disney+
+- DOMAIN-SUFFIX,thewaltdisneycompany.com,Disney+
+- DOMAIN-SUFFIX,thisispolaris.com,Disney+
+- DOMAIN-SUFFIX,watchdisneyfe.com,Disney+
+- DOMAIN-SUFFIX,watchespn.com,Disney+
+- DOMAIN-SUFFIX,t.me,Telegram
+- DOMAIN-SUFFIX,tdesktop.com,Telegram
+- DOMAIN-SUFFIX,telegra.ph,Telegram
+- DOMAIN-SUFFIX,telegram.me,Telegram
+- DOMAIN-SUFFIX,telegram.org,Telegram
+- DOMAIN-SUFFIX,telesco.pe,Telegram
+- IP-CIDR,91.108.0.0/16,Telegram,no-resolve
+- IP-CIDR,109.239.140.0/24,Telegram,no-resolve
+- IP-CIDR,149.154.160.0/20,Telegram,no-resolve
+- IP-CIDR6,2001:67c:4e8::/48,Telegram,no-resolve
+- IP-CIDR6,2001:b28:f23d::/48,Telegram,no-resolve
+- IP-CIDR6,2001:b28:f23f::/48,Telegram,no-resolve
+- DOMAIN-KEYWORD,openai,ChatGPT
+- DOMAIN-SUFFIX,auth0.com,ChatGPT
+- DOMAIN-SUFFIX,challenges.cloudflare.com,ChatGPT
+- DOMAIN-SUFFIX,client-api.arkoselabs.com,ChatGPT
+- DOMAIN-SUFFIX,events.statsigapi.net,ChatGPT
+- DOMAIN-SUFFIX,featuregates.org,ChatGPT
+- DOMAIN-SUFFIX,identrust.com,ChatGPT
+- DOMAIN-SUFFIX,intercom.io,ChatGPT
+- DOMAIN-SUFFIX,intercomcdn.com,ChatGPT
+- DOMAIN-SUFFIX,oaistatic.com,ChatGPT
+- DOMAIN-SUFFIX,oaiusercontent.com,ChatGPT
+- DOMAIN-SUFFIX,openai.com,ChatGPT
+- DOMAIN-SUFFIX,openaiapi-site.azureedge.net,ChatGPT
+- DOMAIN-SUFFIX,sentry.io,ChatGPT
+- DOMAIN-SUFFIX,stripe.com,ChatGPT
+- DOMAIN-KEYWORD,youtube,YouTube
+- DOMAIN,youtubei.googleapis.com,YouTube
+- DOMAIN,yt3.ggpht.com,YouTube
+- DOMAIN-SUFFIX,googlevideo.com,YouTube
+- DOMAIN-SUFFIX,gvt2.com,YouTube
+- DOMAIN-SUFFIX,withyoutube.com,YouTube
+- DOMAIN-SUFFIX,youtu.be,YouTube
+- DOMAIN-SUFFIX,youtube-nocookie.com,YouTube
+- DOMAIN-SUFFIX,youtube.com,YouTube
+- DOMAIN-SUFFIX,youtubeeducation.com,YouTube
+- DOMAIN-SUFFIX,youtubegaming.com,YouTube
+- DOMAIN-SUFFIX,youtubekids.com,YouTube
+- DOMAIN-SUFFIX,yt.be,YouTube
+- DOMAIN-SUFFIX,ytimg.com,YouTube
+- DOMAIN,lf16-effectcdn.byteeffecttos-g.com,Tiktok
+- DOMAIN,lf16-pkgcdn.pitaya-clientai.com,Tiktok
+- DOMAIN,p16-tiktokcdn-com.akamaized.net,Tiktok
+- DOMAIN-SUFFIX,bytedapm.com,Tiktok
+- DOMAIN-SUFFIX,bytegecko-i18n.com,Tiktok
+- DOMAIN-SUFFIX,bytegecko.com,Tiktok
+- DOMAIN-SUFFIX,byteoversea.com,Tiktok
+- DOMAIN-SUFFIX,capcut.com,Tiktok
+- DOMAIN-SUFFIX,ibytedtos.com,Tiktok
+- DOMAIN-SUFFIX,ibyteimg.com,Tiktok
+- DOMAIN-SUFFIX,ipstatp.com,Tiktok
+- DOMAIN-SUFFIX,isnssdk.com,Tiktok
+- DOMAIN-SUFFIX,muscdn.com,Tiktok
+- DOMAIN-SUFFIX,musical.ly,Tiktok
+- DOMAIN-SUFFIX,sgpstatp.com,Tiktok
+- DOMAIN-SUFFIX,snssdk.com,Tiktok
+- DOMAIN-SUFFIX,tik-tokapi.com,Tiktok
+- DOMAIN-SUFFIX,tiktok.com,Tiktok
+- DOMAIN-SUFFIX,tiktokcdn-us.com,Tiktok
+- DOMAIN-SUFFIX,tiktokcdn.com,Tiktok
+- DOMAIN-SUFFIX,tiktokd.net,Tiktok
+- DOMAIN-SUFFIX,tiktokd.org,Tiktok
+- DOMAIN-SUFFIX,tiktokmusic.app,Tiktok
+- DOMAIN-SUFFIX,tiktokv.com,Tiktok
+- DOMAIN-KEYWORD,musical.ly,Tiktok
+- DOMAIN-KEYWORD,tiktok,Tiktok
+- DOMAIN,audio4-ak-spotify-com.akamaized.net,Spotify
+- DOMAIN,cdn-spotify-experiments.conductrics.com,Spotify
+- DOMAIN,heads-ak-spotify-com.akamaized.net,Spotify
+- DOMAIN,spotify.com.edgesuite.net,Spotify
+- DOMAIN,spotify.map.fastly.net,Spotify
+- DOMAIN,spotify.map.fastlylb.net,Spotify
+- DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net,Spotify
+- DOMAIN-SUFFIX,byspotify.com,Spotify
+- DOMAIN-SUFFIX,heads4-ak-spotify-com.akamaized.net,Spotify
+- DOMAIN-SUFFIX,pscdn.co,Spotify
+- DOMAIN-SUFFIX,scdn.co,Spotify
+- DOMAIN-SUFFIX,spoti.fi,Spotify
+- DOMAIN-SUFFIX,spotify-com.akamaized.net,Spotify
+- DOMAIN-SUFFIX,spotify-everywhere.com,Spotify
+- DOMAIN-SUFFIX,spotify.com,Spotify
+- DOMAIN-SUFFIX,spotify.design,Spotify
+- DOMAIN-SUFFIX,spotifycdn.com,Spotify
+- DOMAIN-SUFFIX,spotifycdn.net,Spotify
+- DOMAIN-SUFFIX,spotifycharts.com,Spotify
+- DOMAIN-SUFFIX,spotifycodes.com,Spotify
+- DOMAIN-SUFFIX,spotifyforbrands.com,Spotify
+- DOMAIN-SUFFIX,spotifyjobs.com,Spotify
+- DOMAIN-SUFFIX,spotifynewsroom.jp,Spotify
+- DOMAIN-SUFFIX,spotilocal.com,Spotify
+- DOMAIN-SUFFIX,tospotify.com,Spotify
+- DOMAIN-KEYWORD,-spotify-,Spotify
+- DOMAIN-KEYWORD,spotify.com,Spotify
+- IP-CIDR,104.154.127.126/32,Spotify
+- IP-CIDR,35.186.224.47/32,Spotify
+- DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
+- DOMAIN,safebrowsing.googleapis.com,DIRECT
+- DOMAIN,developer.apple.com,要走代理组
+- DOMAIN-SUFFIX,digicert.com,要走代理组
+- DOMAIN,ocsp.apple.com,要走代理组
+- DOMAIN,ocsp.comodoca.com,要走代理组
+- DOMAIN,ocsp.usertrust.com,要走代理组
+- DOMAIN,ocsp.sectigo.com,要走代理组
+- DOMAIN,ocsp.verisign.net,要走代理组
+- DOMAIN-SUFFIX,apple-dns.net,要走代理组
+- DOMAIN,testflight.apple.com,要走代理组
+- DOMAIN,sandbox.itunes.apple.com,要走代理组
+- DOMAIN,itunes.apple.com,要走代理组
+- DOMAIN-SUFFIX,apps.apple.com,要走代理组
+- DOMAIN-SUFFIX,blobstore.apple.com,要走代理组
+- DOMAIN,cvws.icloud-content.com,要走代理组
+- DOMAIN-SUFFIX,trackernew.ulivetv.net,要走代理组
+- DOMAIN-SUFFIX,mzstatic.com,DIRECT
+- DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+- DOMAIN-SUFFIX,icloud.com,DIRECT
+- DOMAIN-SUFFIX,icloud-content.com,DIRECT
+- DOMAIN-SUFFIX,me.com,DIRECT
+- DOMAIN-SUFFIX,aaplimg.com,DIRECT
+- DOMAIN-SUFFIX,cdn20.com,DIRECT
+- DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+- DOMAIN-SUFFIX,akadns.net,DIRECT
+- DOMAIN-SUFFIX,akamaiedge.net,DIRECT
+- DOMAIN-SUFFIX,edgekey.net,DIRECT
+- DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT
+- DOMAIN-SUFFIX,mwcname.com,DIRECT
+- DOMAIN-SUFFIX,apple.com,DIRECT
+- DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+- DOMAIN-SUFFIX,apple-mapkit.com,DIRECT
+- DOMAIN-SUFFIX,126.com,DIRECT
+- DOMAIN-SUFFIX,126.net,DIRECT
+- DOMAIN-SUFFIX,127.net,DIRECT
+- DOMAIN-SUFFIX,163.com,DIRECT
+- DOMAIN-SUFFIX,360buyimg.com,DIRECT
+- DOMAIN-SUFFIX,36kr.com,DIRECT
+- DOMAIN-SUFFIX,acfun.tv,DIRECT
+- DOMAIN-SUFFIX,air-matters.com,DIRECT
+- DOMAIN-SUFFIX,aixifan.com,DIRECT
+- DOMAIN-KEYWORD,alicdn,DIRECT
+- DOMAIN-KEYWORD,alipay,DIRECT
+- DOMAIN-KEYWORD,taobao,DIRECT
+- DOMAIN-SUFFIX,amap.com,DIRECT
+- DOMAIN-SUFFIX,autonavi.com,DIRECT
+- DOMAIN-KEYWORD,baidu,DIRECT
+- DOMAIN-SUFFIX,bdimg.com,DIRECT
+- DOMAIN-SUFFIX,bdstatic.com,DIRECT
+- DOMAIN-SUFFIX,bilibili.com,DIRECT
+- DOMAIN-SUFFIX,bilivideo.com,DIRECT
+- DOMAIN-SUFFIX,caiyunapp.com,DIRECT
+- DOMAIN-SUFFIX,clouddn.com,DIRECT
+- DOMAIN-SUFFIX,cnbeta.com,DIRECT
+- DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
+- DOMAIN-SUFFIX,cootekservice.com,DIRECT
+- DOMAIN-SUFFIX,csdn.net,DIRECT
+- DOMAIN-SUFFIX,ctrip.com,DIRECT
+- DOMAIN-SUFFIX,dgtle.com,DIRECT
+- DOMAIN-SUFFIX,dianping.com,DIRECT
+- DOMAIN-SUFFIX,douban.com,DIRECT
+- DOMAIN-SUFFIX,doubanio.com,DIRECT
+- DOMAIN-SUFFIX,duokan.com,DIRECT
+- DOMAIN-SUFFIX,easou.com,DIRECT
+- DOMAIN-SUFFIX,ele.me,DIRECT
+- DOMAIN-SUFFIX,feng.com,DIRECT
+- DOMAIN-SUFFIX,fir.im,DIRECT
+- DOMAIN-SUFFIX,frdic.com,DIRECT
+- DOMAIN-SUFFIX,g-cores.com,DIRECT
+- DOMAIN-SUFFIX,godic.net,DIRECT
+- DOMAIN-SUFFIX,gtimg.com,DIRECT
+- DOMAIN,cdn.hockeyapp.net,DIRECT
+- DOMAIN-SUFFIX,hongxiu.com,DIRECT
+- DOMAIN-SUFFIX,hxcdn.net,DIRECT
+- DOMAIN-SUFFIX,iciba.com,DIRECT
+- DOMAIN-SUFFIX,ifeng.com,DIRECT
+- DOMAIN-SUFFIX,ifengimg.com,DIRECT
+- DOMAIN-SUFFIX,ipip.net,DIRECT
+- DOMAIN-SUFFIX,iqiyi.com,DIRECT
+- DOMAIN-SUFFIX,jd.com,DIRECT
+- DOMAIN-SUFFIX,jianshu.com,DIRECT
+- DOMAIN-SUFFIX,knewone.com,DIRECT
+- DOMAIN-SUFFIX,le.com,DIRECT
+- DOMAIN-SUFFIX,lecloud.com,DIRECT
+- DOMAIN-SUFFIX,lemicp.com,DIRECT
+- DOMAIN-SUFFIX,licdn.com,DIRECT
+- DOMAIN-SUFFIX,luoo.net,DIRECT
+- DOMAIN-SUFFIX,meituan.com,DIRECT
+- DOMAIN-SUFFIX,meituan.net,DIRECT
+- DOMAIN-SUFFIX,mi.com,DIRECT
+- DOMAIN-SUFFIX,miaopai.com,DIRECT
+- DOMAIN-SUFFIX,microsoft.com,DIRECT
+- DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+- DOMAIN-SUFFIX,miui.com,DIRECT
+- DOMAIN-SUFFIX,miwifi.com,DIRECT
+- DOMAIN-SUFFIX,mob.com,DIRECT
+- DOMAIN-SUFFIX,netease.com,DIRECT
+- DOMAIN-SUFFIX,office.com,DIRECT
+- DOMAIN-SUFFIX,office365.com,DIRECT
+- DOMAIN-KEYWORD,officecdn,DIRECT
+- DOMAIN-SUFFIX,oschina.net,DIRECT
+- DOMAIN-SUFFIX,ppsimg.com,DIRECT
+- DOMAIN-SUFFIX,pstatp.com,DIRECT
+- DOMAIN-SUFFIX,qcloud.com,DIRECT
+- DOMAIN-SUFFIX,qdaily.com,DIRECT
+- DOMAIN-SUFFIX,qdmm.com,DIRECT
+- DOMAIN-SUFFIX,qhimg.com,DIRECT
+- DOMAIN-SUFFIX,qhres.com,DIRECT
+- DOMAIN-SUFFIX,qidian.com,DIRECT
+- DOMAIN-SUFFIX,qihucdn.com,DIRECT
+- DOMAIN-SUFFIX,qiniu.com,DIRECT
+- DOMAIN-SUFFIX,qiniucdn.com,DIRECT
+- DOMAIN-SUFFIX,qiyipic.com,DIRECT
+- DOMAIN-SUFFIX,qq.com,DIRECT
+- DOMAIN-SUFFIX,qqurl.com,DIRECT
+- DOMAIN-SUFFIX,rarbg.to,DIRECT
+- DOMAIN-SUFFIX,ruguoapp.com,DIRECT
+- DOMAIN-SUFFIX,segmentfault.com,DIRECT
+- DOMAIN-SUFFIX,sinaapp.com,DIRECT
+- DOMAIN-SUFFIX,smzdm.com,DIRECT
+- DOMAIN-SUFFIX,snapdrop.net,DIRECT
+- DOMAIN-SUFFIX,sogou.com,DIRECT
+- DOMAIN-SUFFIX,sogoucdn.com,DIRECT
+- DOMAIN-SUFFIX,sohu.com,DIRECT
+- DOMAIN-SUFFIX,soku.com,DIRECT
+- DOMAIN-SUFFIX,speedtest.net,DIRECT
+- DOMAIN-SUFFIX,sspai.com,DIRECT
+- DOMAIN-SUFFIX,suning.com,DIRECT
+- DOMAIN-SUFFIX,taobao.com,DIRECT
+- DOMAIN-SUFFIX,tencent.com,DIRECT
+- DOMAIN-SUFFIX,tenpay.com,DIRECT
+- DOMAIN-SUFFIX,tianyancha.com,DIRECT
+- DOMAIN-SUFFIX,tmall.com,DIRECT
+- DOMAIN-SUFFIX,tudou.com,DIRECT
+- DOMAIN-SUFFIX,umetrip.com,DIRECT
+- DOMAIN-SUFFIX,upaiyun.com,DIRECT
+- DOMAIN-SUFFIX,upyun.com,DIRECT
+- DOMAIN-SUFFIX,veryzhun.com,DIRECT
+- DOMAIN-SUFFIX,weather.com,DIRECT
+- DOMAIN-SUFFIX,weibo.com,DIRECT
+- DOMAIN-SUFFIX,xiami.com,DIRECT
+- DOMAIN-SUFFIX,xiami.net,DIRECT
+- DOMAIN-SUFFIX,xiaomicp.com,DIRECT
+- DOMAIN-SUFFIX,ximalaya.com,DIRECT
+- DOMAIN-SUFFIX,xmcdn.com,DIRECT
+- DOMAIN-SUFFIX,xunlei.com,DIRECT
+- DOMAIN-SUFFIX,yhd.com,DIRECT
+- DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
+- DOMAIN-SUFFIX,yinxiang.com,DIRECT
+- DOMAIN-SUFFIX,ykimg.com,DIRECT
+- DOMAIN-SUFFIX,youdao.com,DIRECT
+- DOMAIN-SUFFIX,youku.com,DIRECT
+- DOMAIN-SUFFIX,zealer.com,DIRECT
+- DOMAIN-SUFFIX,zhihu.com,DIRECT
+- DOMAIN-SUFFIX,zhimg.com,DIRECT
+- DOMAIN-SUFFIX,zimuzu.tv,DIRECT
+- DOMAIN-SUFFIX,zoho.com,DIRECT
+- DOMAIN-KEYWORD,amazon,要走代理组
+- DOMAIN-KEYWORD,google,要走代理组
+- DOMAIN-KEYWORD,gmail,要走代理组
+- DOMAIN-KEYWORD,youtube,要走代理组
+- DOMAIN-KEYWORD,facebook,要走代理组
+- DOMAIN-SUFFIX,fb.me,要走代理组
+- DOMAIN-SUFFIX,fbcdn.net,要走代理组
+- DOMAIN-KEYWORD,twitter,要走代理组
+- DOMAIN-KEYWORD,instagram,要走代理组
+- DOMAIN-KEYWORD,dropbox,要走代理组
+- DOMAIN-SUFFIX,twimg.com,要走代理组
+- DOMAIN-KEYWORD,blogspot,要走代理组
+- DOMAIN-SUFFIX,youtu.be,要走代理组
+- DOMAIN-KEYWORD,whatsapp,要走代理组
+- DOMAIN-KEYWORD,admarvel,REJECT
+- DOMAIN-KEYWORD,admaster,REJECT
+- DOMAIN-KEYWORD,adsage,REJECT
+- DOMAIN-KEYWORD,adsmogo,REJECT
+- DOMAIN-KEYWORD,adsrvmedia,REJECT
+- DOMAIN-KEYWORD,adwords,REJECT
+- DOMAIN-KEYWORD,adservice,REJECT
+- DOMAIN-KEYWORD,domob,REJECT
+- DOMAIN-SUFFIX,doubleclick.net,REJECT
+- DOMAIN-KEYWORD,duomeng,REJECT
+- DOMAIN-KEYWORD,dwtrack,REJECT
+- DOMAIN-KEYWORD,guanggao,REJECT
+- DOMAIN-KEYWORD,lianmeng,REJECT
+- DOMAIN-SUFFIX,mmstat.com,REJECT
+- DOMAIN-KEYWORD,mopub,REJECT
+- DOMAIN-KEYWORD,omgmta,REJECT
+- DOMAIN-KEYWORD,openx,REJECT
+- DOMAIN-KEYWORD,partnerad,REJECT
+- DOMAIN-KEYWORD,pingfore,REJECT
+- DOMAIN-KEYWORD,supersonicads,REJECT
+- DOMAIN-KEYWORD,uedas,REJECT
+- DOMAIN-KEYWORD,umeng,REJECT
+- DOMAIN-KEYWORD,usage,REJECT
+- DOMAIN-SUFFIX,vungle.com,REJECT
+- DOMAIN-KEYWORD,wlmonitor,REJECT
+- DOMAIN-KEYWORD,zjtoolbar,REJECT
+- DOMAIN-SUFFIX,9to5mac.com,要走代理组
+- DOMAIN-SUFFIX,abpchina.org,要走代理组
+- DOMAIN-SUFFIX,adblockplus.org,要走代理组
+- DOMAIN-SUFFIX,adobe.com,要走代理组
+- DOMAIN-SUFFIX,akamaized.net,要走代理组
+- DOMAIN-SUFFIX,alfredapp.com,要走代理组
+- DOMAIN-SUFFIX,amplitude.com,要走代理组
+- DOMAIN-SUFFIX,ampproject.org,要走代理组
+- DOMAIN-SUFFIX,android.com,要走代理组
+- DOMAIN-SUFFIX,angularjs.org,要走代理组
+- DOMAIN-SUFFIX,aolcdn.com,要走代理组
+- DOMAIN-SUFFIX,apkpure.com,要走代理组
+- DOMAIN-SUFFIX,appledaily.com,要走代理组
+- DOMAIN-SUFFIX,appshopper.com,要走代理组
+- DOMAIN-SUFFIX,appspot.com,要走代理组
+- DOMAIN-SUFFIX,arcgis.com,要走代理组
+- DOMAIN-SUFFIX,archive.org,要走代理组
+- DOMAIN-SUFFIX,armorgames.com,要走代理组
+- DOMAIN-SUFFIX,aspnetcdn.com,要走代理组
+- DOMAIN-SUFFIX,att.com,要走代理组
+- DOMAIN-SUFFIX,awsstatic.com,要走代理组
+- DOMAIN-SUFFIX,azureedge.net,要走代理组
+- DOMAIN-SUFFIX,azurewebsites.net,要走代理组
+- DOMAIN-SUFFIX,bing.com,要走代理组
+- DOMAIN-SUFFIX,bintray.com,要走代理组
+- DOMAIN-SUFFIX,bit.com,要走代理组
+- DOMAIN-SUFFIX,bit.ly,要走代理组
+- DOMAIN-SUFFIX,bitbucket.org,要走代理组
+- DOMAIN-SUFFIX,bjango.com,要走代理组
+- DOMAIN-SUFFIX,bkrtx.com,要走代理组
+- DOMAIN-SUFFIX,blog.com,要走代理组
+- DOMAIN-SUFFIX,blogcdn.com,要走代理组
+- DOMAIN-SUFFIX,blogger.com,要走代理组
+- DOMAIN-SUFFIX,blogsmithmedia.com,要走代理组
+- DOMAIN-SUFFIX,blogspot.com,要走代理组
+- DOMAIN-SUFFIX,blogspot.hk,要走代理组
+- DOMAIN-SUFFIX,bloomberg.com,要走代理组
+- DOMAIN-SUFFIX,box.com,要走代理组
+- DOMAIN-SUFFIX,box.net,要走代理组
+- DOMAIN-SUFFIX,cachefly.net,要走代理组
+- DOMAIN-SUFFIX,chromium.org,要走代理组
+- DOMAIN-SUFFIX,cl.ly,要走代理组
+- DOMAIN-SUFFIX,cloudflare.com,要走代理组
+- DOMAIN-SUFFIX,cloudfront.net,要走代理组
+- DOMAIN-SUFFIX,cloudmagic.com,要走代理组
+- DOMAIN-SUFFIX,cmail19.com,要走代理组
+- DOMAIN-SUFFIX,cnet.com,要走代理组
+- DOMAIN-SUFFIX,cocoapods.org,要走代理组
+- DOMAIN-SUFFIX,comodoca.com,要走代理组
+- DOMAIN-SUFFIX,crashlytics.com,要走代理组
+- DOMAIN-SUFFIX,culturedcode.com,要走代理组
+- DOMAIN-SUFFIX,d.pr,要走代理组
+- DOMAIN-SUFFIX,danilo.to,要走代理组
+- DOMAIN-SUFFIX,dayone.me,要走代理组
+- DOMAIN-SUFFIX,db.tt,要走代理组
+- DOMAIN-SUFFIX,deskconnect.com,要走代理组
+- DOMAIN-SUFFIX,disq.us,要走代理组
+- DOMAIN-SUFFIX,disqus.com,要走代理组
+- DOMAIN-SUFFIX,disquscdn.com,要走代理组
+- DOMAIN-SUFFIX,dnsimple.com,要走代理组
+- DOMAIN-SUFFIX,docker.com,要走代理组
+- DOMAIN-SUFFIX,dribbble.com,要走代理组
+- DOMAIN-SUFFIX,droplr.com,要走代理组
+- DOMAIN-SUFFIX,duckduckgo.com,要走代理组
+- DOMAIN-SUFFIX,dueapp.com,要走代理组
+- DOMAIN-SUFFIX,dytt8.net,要走代理组
+- DOMAIN-SUFFIX,edgecastcdn.net,要走代理组
+- DOMAIN-SUFFIX,edgekey.net,要走代理组
+- DOMAIN-SUFFIX,edgesuite.net,要走代理组
+- DOMAIN-SUFFIX,engadget.com,要走代理组
+- DOMAIN-SUFFIX,entrust.net,要走代理组
+- DOMAIN-SUFFIX,eurekavpt.com,要走代理组
+- DOMAIN-SUFFIX,evernote.com,要走代理组
+- DOMAIN-SUFFIX,fabric.io,要走代理组
+- DOMAIN-SUFFIX,fast.com,要走代理组
+- DOMAIN-SUFFIX,fastly.net,要走代理组
+- DOMAIN-SUFFIX,fc2.com,要走代理组
+- DOMAIN-SUFFIX,feedburner.com,要走代理组
+- DOMAIN-SUFFIX,feedly.com,要走代理组
+- DOMAIN-SUFFIX,feedsportal.com,要走代理组
+- DOMAIN-SUFFIX,fiftythree.com,要走代理组
+- DOMAIN-SUFFIX,firebaseio.com,要走代理组
+- DOMAIN-SUFFIX,flexibits.com,要走代理组
+- DOMAIN-SUFFIX,flickr.com,要走代理组
+- DOMAIN-SUFFIX,flipboard.com,要走代理组
+- DOMAIN-SUFFIX,g.co,要走代理组
+- DOMAIN-SUFFIX,gabia.net,要走代理组
+- DOMAIN-SUFFIX,geni.us,要走代理组
+- DOMAIN-SUFFIX,gfx.ms,要走代理组
+- DOMAIN-SUFFIX,ggpht.com,要走代理组
+- DOMAIN-SUFFIX,ghostnoteapp.com,要走代理组
+- DOMAIN-SUFFIX,git.io,要走代理组
+- DOMAIN-KEYWORD,github,要走代理组
+- DOMAIN-SUFFIX,globalsign.com,要走代理组
+- DOMAIN-SUFFIX,gmodules.com,要走代理组
+- DOMAIN-SUFFIX,godaddy.com,要走代理组
+- DOMAIN-SUFFIX,golang.org,要走代理组
+- DOMAIN-SUFFIX,gongm.in,要走代理组
+- DOMAIN-SUFFIX,goo.gl,要走代理组
+- DOMAIN-SUFFIX,goodreaders.com,要走代理组
+- DOMAIN-SUFFIX,goodreads.com,要走代理组
+- DOMAIN-SUFFIX,gravatar.com,要走代理组
+- DOMAIN-SUFFIX,gstatic.com,要走代理组
+- DOMAIN-SUFFIX,gvt0.com,要走代理组
+- DOMAIN-SUFFIX,hockeyapp.net,要走代理组
+- DOMAIN-SUFFIX,hotmail.com,要走代理组
+- DOMAIN-SUFFIX,icons8.com,要走代理组
+- DOMAIN-SUFFIX,ifixit.com,要走代理组
+- DOMAIN-SUFFIX,ift.tt,要走代理组
+- DOMAIN-SUFFIX,ifttt.com,要走代理组
+- DOMAIN-SUFFIX,iherb.com,要走代理组
+- DOMAIN-SUFFIX,imageshack.us,要走代理组
+- DOMAIN-SUFFIX,img.ly,要走代理组
+- DOMAIN-SUFFIX,imgur.com,要走代理组
+- DOMAIN-SUFFIX,imore.com,要走代理组
+- DOMAIN-SUFFIX,instapaper.com,要走代理组
+- DOMAIN-SUFFIX,ipn.li,要走代理组
+- DOMAIN-SUFFIX,is.gd,要走代理组
+- DOMAIN-SUFFIX,issuu.com,要走代理组
+- DOMAIN-SUFFIX,itgonglun.com,要走代理组
+- DOMAIN-SUFFIX,itun.es,要走代理组
+- DOMAIN-SUFFIX,ixquick.com,要走代理组
+- DOMAIN-SUFFIX,j.mp,要走代理组
+- DOMAIN-SUFFIX,js.revsci.net,要走代理组
+- DOMAIN-SUFFIX,jshint.com,要走代理组
+- DOMAIN-SUFFIX,jtvnw.net,要走代理组
+- DOMAIN-SUFFIX,justgetflux.com,要走代理组
+- DOMAIN-SUFFIX,kat.cr,要走代理组
+- DOMAIN-SUFFIX,klip.me,要走代理组
+- DOMAIN-SUFFIX,libsyn.com,要走代理组
+- DOMAIN-SUFFIX,linkedin.com,要走代理组
+- DOMAIN-SUFFIX,line-apps.com,要走代理组
+- DOMAIN-SUFFIX,linode.com,要走代理组
+- DOMAIN-SUFFIX,lithium.com,要走代理组
+- DOMAIN-SUFFIX,littlehj.com,要走代理组
+- DOMAIN-SUFFIX,live.com,要走代理组
+- DOMAIN-SUFFIX,live.net,要走代理组
+- DOMAIN-SUFFIX,livefilestore.com,要走代理组
+- DOMAIN-SUFFIX,llnwd.net,要走代理组
+- DOMAIN-SUFFIX,macid.co,要走代理组
+- DOMAIN-SUFFIX,macromedia.com,要走代理组
+- DOMAIN-SUFFIX,macrumors.com,要走代理组
+- DOMAIN-SUFFIX,mashable.com,要走代理组
+- DOMAIN-SUFFIX,mathjax.org,要走代理组
+- DOMAIN-SUFFIX,medium.com,要走代理组
+- DOMAIN-SUFFIX,mega.co.nz,要走代理组
+- DOMAIN-SUFFIX,mega.nz,要走代理组
+- DOMAIN-SUFFIX,megaupload.com,要走代理组
+- DOMAIN-SUFFIX,microsofttranslator.com,要走代理组
+- DOMAIN-SUFFIX,mindnode.com,要走代理组
+- DOMAIN-SUFFIX,mobile01.com,要走代理组
+- DOMAIN-SUFFIX,modmyi.com,要走代理组
+- DOMAIN-SUFFIX,msedge.net,要走代理组
+- DOMAIN-SUFFIX,myfontastic.com,要走代理组
+- DOMAIN-SUFFIX,name.com,要走代理组
+- DOMAIN-SUFFIX,nextmedia.com,要走代理组
+- DOMAIN-SUFFIX,nsstatic.net,要走代理组
+- DOMAIN-SUFFIX,nssurge.com,要走代理组
+- DOMAIN-SUFFIX,nyt.com,要走代理组
+- DOMAIN-SUFFIX,nytimes.com,要走代理组
+- DOMAIN-SUFFIX,omnigroup.com,要走代理组
+- DOMAIN-SUFFIX,onedrive.com,要走代理组
+- DOMAIN-SUFFIX,onenote.com,要走代理组
+- DOMAIN-SUFFIX,ooyala.com,要走代理组
+- DOMAIN-SUFFIX,openvpn.net,要走代理组
+- DOMAIN-SUFFIX,openwrt.org,要走代理组
+- DOMAIN-SUFFIX,orkut.com,要走代理组
+- DOMAIN-SUFFIX,osxdaily.com,要走代理组
+- DOMAIN-SUFFIX,outlook.com,要走代理组
+- DOMAIN-SUFFIX,ow.ly,要走代理组
+- DOMAIN-SUFFIX,paddleapi.com,要走代理组
+- DOMAIN-SUFFIX,parallels.com,要走代理组
+- DOMAIN-SUFFIX,parse.com,要走代理组
+- DOMAIN-SUFFIX,pdfexpert.com,要走代理组
+- DOMAIN-SUFFIX,periscope.tv,要走代理组
+- DOMAIN-SUFFIX,pinboard.in,要走代理组
+- DOMAIN-SUFFIX,pinterest.com,要走代理组
+- DOMAIN-SUFFIX,pixelmator.com,要走代理组
+- DOMAIN-SUFFIX,pixiv.net,要走代理组
+- DOMAIN-SUFFIX,playpcesor.com,要走代理组
+- DOMAIN-SUFFIX,playstation.com,要走代理组
+- DOMAIN-SUFFIX,playstation.com.hk,要走代理组
+- DOMAIN-SUFFIX,playstation.net,要走代理组
+- DOMAIN-SUFFIX,playstationnetwork.com,要走代理组
+- DOMAIN-SUFFIX,pushwoosh.com,要走代理组
+- DOMAIN-SUFFIX,rime.im,要走代理组
+- DOMAIN-SUFFIX,servebom.com,要走代理组
+- DOMAIN-SUFFIX,sfx.ms,要走代理组
+- DOMAIN-SUFFIX,shadowsocks.org,要走代理组
+- DOMAIN-SUFFIX,sharethis.com,要走代理组
+- DOMAIN-SUFFIX,shazam.com,要走代理组
+- DOMAIN-SUFFIX,skype.com,要走代理组
+- DOMAIN-SUFFIX,smartdns要走代理组.com,要走代理组
+- DOMAIN-SUFFIX,smartmailcloud.com,要走代理组
+- DOMAIN-SUFFIX,sndcdn.com,要走代理组
+- DOMAIN-SUFFIX,sony.com,要走代理组
+- DOMAIN-SUFFIX,soundcloud.com,要走代理组
+- DOMAIN-SUFFIX,sourceforge.net,要走代理组
+- DOMAIN-SUFFIX,spotify.com,要走代理组
+- DOMAIN-SUFFIX,squarespace.com,要走代理组
+- DOMAIN-SUFFIX,sstatic.net,要走代理组
+- DOMAIN-SUFFIX,st.luluku.pw,要走代理组
+- DOMAIN-SUFFIX,stackoverflow.com,要走代理组
+- DOMAIN-SUFFIX,startpage.com,要走代理组
+- DOMAIN-SUFFIX,staticflickr.com,要走代理组
+- DOMAIN-SUFFIX,steamcommunity.com,要走代理组
+- DOMAIN-SUFFIX,symauth.com,要走代理组
+- DOMAIN-SUFFIX,symcb.com,要走代理组
+- DOMAIN-SUFFIX,symcd.com,要走代理组
+- DOMAIN-SUFFIX,tapbots.com,要走代理组
+- DOMAIN-SUFFIX,tapbots.net,要走代理组
+- DOMAIN-SUFFIX,tdesktop.com,要走代理组
+- DOMAIN-SUFFIX,techcrunch.com,要走代理组
+- DOMAIN-SUFFIX,techsmith.com,要走代理组
+- DOMAIN-SUFFIX,thepiratebay.org,要走代理组
+- DOMAIN-SUFFIX,theverge.com,要走代理组
+- DOMAIN-SUFFIX,time.com,要走代理组
+- DOMAIN-SUFFIX,timeinc.net,要走代理组
+- DOMAIN-SUFFIX,tiny.cc,要走代理组
+- DOMAIN-SUFFIX,tinypic.com,要走代理组
+- DOMAIN-SUFFIX,tmblr.co,要走代理组
+- DOMAIN-SUFFIX,todoist.com,要走代理组
+- DOMAIN-SUFFIX,trello.com,要走代理组
+- DOMAIN-SUFFIX,trustasiassl.com,要走代理组
+- DOMAIN-SUFFIX,tumblr.co,要走代理组
+- DOMAIN-SUFFIX,tumblr.com,要走代理组
+- DOMAIN-SUFFIX,tweetdeck.com,要走代理组
+- DOMAIN-SUFFIX,tweetmarker.net,要走代理组
+- DOMAIN-SUFFIX,twitch.tv,要走代理组
+- DOMAIN-SUFFIX,txmblr.com,要走代理组
+- DOMAIN-SUFFIX,typekit.net,要走代理组
+- DOMAIN-SUFFIX,ubertags.com,要走代理组
+- DOMAIN-SUFFIX,ublock.org,要走代理组
+- DOMAIN-SUFFIX,ubnt.com,要走代理组
+- DOMAIN-SUFFIX,ulyssesapp.com,要走代理组
+- DOMAIN-SUFFIX,urchin.com,要走代理组
+- DOMAIN-SUFFIX,usertrust.com,要走代理组
+- DOMAIN-SUFFIX,v.gd,要走代理组
+- DOMAIN-SUFFIX,v2ex.com,要走代理组
+- DOMAIN-SUFFIX,vimeo.com,要走代理组
+- DOMAIN-SUFFIX,vimeocdn.com,要走代理组
+- DOMAIN-SUFFIX,vine.co,要走代理组
+- DOMAIN-SUFFIX,vivaldi.com,要走代理组
+- DOMAIN-SUFFIX,vox-cdn.com,要走代理组
+- DOMAIN-SUFFIX,vsco.co,要走代理组
+- DOMAIN-SUFFIX,vultr.com,要走代理组
+- DOMAIN-SUFFIX,w.org,要走代理组
+- DOMAIN-SUFFIX,w3schools.com,要走代理组
+- DOMAIN-SUFFIX,webtype.com,要走代理组
+- DOMAIN-SUFFIX,wikiwand.com,要走代理组
+- DOMAIN-SUFFIX,wikileaks.org,要走代理组
+- DOMAIN-SUFFIX,wikimedia.org,要走代理组
+- DOMAIN-SUFFIX,wikipedia.com,要走代理组
+- DOMAIN-SUFFIX,wikipedia.org,要走代理组
+- DOMAIN-SUFFIX,windows.com,要走代理组
+- DOMAIN-SUFFIX,windows.net,要走代理组
+- DOMAIN-SUFFIX,wire.com,要走代理组
+- DOMAIN-SUFFIX,wordpress.com,要走代理组
+- DOMAIN-SUFFIX,workflowy.com,要走代理组
+- DOMAIN-SUFFIX,wp.com,要走代理组
+- DOMAIN-SUFFIX,wsj.com,要走代理组
+- DOMAIN-SUFFIX,wsj.net,要走代理组
+- DOMAIN-SUFFIX,xda-developers.com,要走代理组
+- DOMAIN-SUFFIX,xeeno.com,要走代理组
+- DOMAIN-SUFFIX,xiti.com,要走代理组
+- DOMAIN-SUFFIX,yahoo.com,要走代理组
+- DOMAIN-SUFFIX,yimg.com,要走代理组
+- DOMAIN-SUFFIX,ying.com,要走代理组
+- DOMAIN-SUFFIX,yoyo.org,要走代理组
+- DOMAIN-SUFFIX,ytimg.com,要走代理组
+- DOMAIN-SUFFIX,telegra.ph,要走代理组
+- DOMAIN-SUFFIX,telegram.org,要走代理组
+- IP-CIDR,91.108.4.0/22,要走代理组,no-resolve
+- IP-CIDR,91.108.8.0/21,要走代理组,no-resolve
+- IP-CIDR,91.108.16.0/22,要走代理组,no-resolve
+- IP-CIDR,91.108.56.0/22,要走代理组,no-resolve
+- IP-CIDR,149.154.160.0/20,要走代理组,no-resolve
+- IP-CIDR6,2001:67c:4e8::/48,要走代理组,no-resolve
+- IP-CIDR6,2001:b28:f23d::/48,要走代理组,no-resolve
+- IP-CIDR6,2001:b28:f23f::/48,要走代理组,no-resolve
+- IP-CIDR,120.232.181.162/32,要走代理组,no-resolve
+- IP-CIDR,120.241.147.226/32,要走代理组,no-resolve
+- IP-CIDR,120.253.253.226/32,要走代理组,no-resolve
+- IP-CIDR,120.253.255.162/32,要走代理组,no-resolve
+- IP-CIDR,120.253.255.34/32,要走代理组,no-resolve
+- IP-CIDR,120.253.255.98/32,要走代理组,no-resolve
+- IP-CIDR,180.163.150.162/32,要走代理组,no-resolve
+- IP-CIDR,180.163.150.34/32,要走代理组,no-resolve
+- IP-CIDR,180.163.151.162/32,要走代理组,no-resolve
+- IP-CIDR,180.163.151.34/32,要走代理组,no-resolve
+- IP-CIDR,203.208.39.0/24,要走代理组,no-resolve
+- IP-CIDR,203.208.40.0/24,要走代理组,no-resolve
+- IP-CIDR,203.208.41.0/24,要走代理组,no-resolve
+- IP-CIDR,203.208.43.0/24,要走代理组,no-resolve
+- IP-CIDR,203.208.50.0/24,要走代理组,no-resolve
+- IP-CIDR,220.181.174.162/32,要走代理组,no-resolve
+- IP-CIDR,220.181.174.226/32,要走代理组,no-resolve
+- IP-CIDR,220.181.174.34/32,要走代理组,no-resolve
+- DOMAIN,injections.adguard.org,DIRECT
+- DOMAIN,local.adguard.org,DIRECT
+- DOMAIN-SUFFIX,local,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,17.0.0.0/8,DIRECT
+- IP-CIDR,100.64.0.0/10,DIRECT
+- IP-CIDR,224.0.0.0/4,DIRECT
+- IP-CIDR6,fe80::/10,DIRECT
+- DOMAIN-SUFFIX,cn,DIRECT
+- DOMAIN-KEYWORD,-cn,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,要走代理组

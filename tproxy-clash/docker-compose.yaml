@@ -1,0 +1,19 @@
+name: transparent-proxy
+version: "3"
+services:
+  mihomo:
+    stdin_open: true
+    tty: true
+    volumes:
+     - ./config.yaml:/root/.config/mihomo/config.yaml
+     - /dev/net/tun:/dev/net/tun
+    cap_add:
+     - NET_ADMIN
+    image: metacubex/mihomo:v1.18.3
+  ubuntu:
+    stdin_open: true
+    tty: true
+    network_mode: container:${COMPOSE_PROJECT_NAME}-mihomo-1
+    image: ubuntu
+    depends_on:
+     - mihomo
