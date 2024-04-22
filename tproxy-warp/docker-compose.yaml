@@ -1,0 +1,28 @@
+name: warp-transparent-proxy
+version: "3"
+services:
+  warp-tproxy:
+    stdin_open: true
+    tty: true
+    environment:
+      # # 使用zero trust方式
+      # - WARP_ORG_ID=paperdragxx
+      # - WARP_AUTH_CLIENT_ID=c4d31ea084c2940e17b714de890xxxxx.access
+      # - WARP_AUTH_CLIENT_SECRET=7120f34bd52ce19a90534ca804cdaeaa72bb03e9c5da10ee0279fdc7bcdxxxxx
+      # - WARP_UNIQUE_CLIENT_ID=aa7b5738-ff99-11ee-b4c1-72e2181b199b
+      # 使用key方式
+      - WARP_LICENSE=Y9U8f53G-0C8Z9d1j-C37hg8c9
+      # DEBUG
+      - DEBUG=True
+    volumes:
+     - /dev/net/tun:/dev/net/tun
+    cap_add:
+     - NET_ADMIN
+    image: jockerdragon/warp-tproxy:v1.0.1.1
+  ubuntu:
+    stdin_open: true
+    tty: true
+    network_mode: container:${COMPOSE_PROJECT_NAME}-warp-tproxy-1
+    image: ubuntu
+    depends_on:
+     - warp-tproxy
