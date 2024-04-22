@@ -160,7 +160,7 @@ curl cip.cc
 
 ```bash
 # 使用zero trust方式
-- WARP_ORG_ID=paperdragon
+- WARP_ORG_ID=paperdragxx
 - WARP_AUTH_CLIENT_ID=c4d31ea084c2940e17b714de890xxxxx.access
 - WARP_AUTH_CLIENT_SECRET=7120f34bd52ce19a90534ca804cdaeaa72bb03e9c5da10ee0279fdc7bcdxxxxx
 - WARP_UNIQUE_CLIENT_ID=aa7b5738-ff99-11ee-b4c1-72e2181b199b  # 可选
