@@ -248,7 +248,9 @@ docker run -d \
 	--sysctl net.ipv6.conf.default.disable_ipv6=0 \
 	--cap-add NET_ADMIN \
 	--name tun2proxy \
-	ghcr.io/tun2proxy/tun2proxy:latest --proxy proto://[username[:password]@]host:port
+	ghcr.io/tun2proxy/tun2proxy:latest --dns virtual --proxy proto://[username[:password]@]host:port
+# proto is one of socks4, socks5, http. For example: socks5://myname:password@127.0.0.1:1080
+
 ```
 
 通过共享网络命名空间将正在运行的容器的网络提供给另一个工作容器（类似于 Kubernetes sidecar）：
