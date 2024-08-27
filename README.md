@@ -248,8 +248,7 @@ docker run -d \
 	--sysctl net.ipv6.conf.default.disable_ipv6=0 \
 	--cap-add NET_ADMIN \
 	--name tun2proxy \
-	-e PROXY=proto://[username[:password]@]host:port \
-	ghcr.io/tun2proxy/tun2proxy:latest
+	ghcr.io/tun2proxy/tun2proxy:latest --proxy proto://[username[:password]@]host:port
 ```
 
 通过共享网络命名空间将正在运行的容器的网络提供给另一个工作容器（类似于 Kubernetes sidecar）：
