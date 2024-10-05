@@ -1,0 +1,17 @@
+name: tp
+services:
+    tun2proxy:
+        volumes:
+          - /dev/net/tun:/dev/net/tun
+        sysctls:
+          - net.ipv6.conf.default.disable_ipv6=0
+        cap_add:
+          - NET_ADMIN
+        container_name: tun2proxy
+        image: ghcr.geekery.cn/tun2proxy/tun2proxy:latest
+        command: --dns virtual --proxy socks5://myname:password@127.0.0.1:1080 # edit here
+    ubuntu:
+        stdin_open: true
+        tty: true
+        network_mode: container:tun2proxy
+        image: ubuntu:latest

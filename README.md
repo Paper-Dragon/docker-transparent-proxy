@@ -32,10 +32,6 @@
 - [致谢](#致谢)
 - [协议](#致谢)
 
-
-
-
-
 ## Clash Core实现模式
 
 更新了新版meta内核，安全性有保障。
@@ -48,7 +44,7 @@
 
 编写 `config.yaml` 并添加节点，原有配置不要修改。
 
-### Clash配置文档 
+### Clash配置文档
 
  [虚空终端 Docs](https://wiki.metacubex.one/config/)
 
@@ -115,8 +111,6 @@ cd tproxy-clash
 docker compose up -d
 ```
 
-
-
 ## Warp实现模式
 
 这个代码实现通过warp网络给一个容器分配一个公网ip，并且连接到国际网络。
@@ -127,12 +121,10 @@ Docker Hub地址 [jockerdragon/warp-tproxy](https://hub.docker.com/r/jockerdrago
 
 免费密钥获取： [geekery.cn](https://www.geekery.cn/free-service/cloudflare-warp.html)。
 
-
 适用于 `free` 或 `warp+` 和 `Zero Trust` 网络，因为不可明说的原因，大陆用户建议使用 `Zero Trust` 。
 
-
-
 ### 功能
+
 它可以让单个Docker容器内部具有透明代理，且拥有一个与本机公网ip不同的公网ip。
 
 #### 如何使用？
@@ -140,11 +132,13 @@ Docker Hub地址 [jockerdragon/warp-tproxy](https://hub.docker.com/r/jockerdrago
 根据启动模式在 `docker-compose.yaml` 文件里设置变量。
 
 启动命令
+
 ```bash
 docker compose up -d
 ```
 
 测试
+
 ```bash
 docker exec -it warp-transparent-proxy-warp-tproxy-1 bash
 apt update && apt install curl -y
@@ -152,10 +146,12 @@ curl ifconfig.icu
 curl cip.cc
 ```
 
-
 ### 启动模式
+
 详细介绍看 [Warp Tproxy For Docker](https://github.com/Paper-Dragon/warp-tproxy-for-docker/blob/container-tproxy/README.zh_CN.md)
+
 #### Zero Turst模式
+
 设置环境变量
 
 ```bash
@@ -165,6 +161,7 @@ curl cip.cc
 - WARP_AUTH_CLIENT_SECRET=7120f34bd52ce19a90534ca804cdaeaa72bb03e9c5da10ee0279fdc7bcdxxxxx
 - WARP_UNIQUE_CLIENT_ID=aa7b5738-ff99-11ee-b4c1-72e2181b199b  # 可选
 ```
+
 ##### Zero-Turst模式启动日志
 
 ```text
@@ -196,14 +193,16 @@ warp-svc config: /var/lib/cloudflare-warp/conf.json
 ```
 
 #### Warp Plus模式
+
 必须在宿主机内安装wireguard  `apt update && apt install wireguard -y`
+
 ```bash
 # 使用key方式
 - WARP_LICENSE=Y9U8f53G-0C8Z9d1j-C37hg8c9
 ```
 
-
 ##### Warp-Plus模式启动日志
+
 ```text
  *  正在执行任务: docker compose --file '/root/docker-transparent-proxy/tproxy-warp/docker-compose.yaml' --project-name 'warp-transparent-proxy' logs --follow --tail '1000' 
 
@@ -229,7 +228,9 @@ warp-tproxy-1  |     E.g.:
 warp-tproxy-1  |       curl https://cloudflare.com/cdn-cgi/trace (inside container)
 
 ```
+
 ### Free 模式
+
 在大陆地区极低概率连接成功，不建议使用。
 
 ## tun2proxy实现模式
@@ -242,13 +243,23 @@ warp-tproxy-1  |       curl https://cloudflare.com/cdn-cgi/trace (inside contain
 
 ### tun2proxy使用方法
 
+#### compose方式
+
+```bash
+cd tproxy-tun2proxy
+# edit compose file filled proxy protocol
+docker compose up -d
+```
+
+#### 命令行方式
+
 ```bash
 docker run -d \
-	-v /dev/net/tun:/dev/net/tun \
-	--sysctl net.ipv6.conf.default.disable_ipv6=0 \
-	--cap-add NET_ADMIN \
-	--name tun2proxy \
-	ghcr.io/tun2proxy/tun2proxy:latest --dns virtual --proxy proto://[username[:password]@]host:port
+ -v /dev/net/tun:/dev/net/tun \
+ --sysctl net.ipv6.conf.default.disable_ipv6=0 \
+ --cap-add NET_ADMIN \
+ --name tun2proxy \
+ ghcr.io/tun2proxy/tun2proxy:latest --dns virtual --proxy proto://[username[:password]@]host:port
 # proto is one of socks4, socks5, http. For example: socks5://myname:password@127.0.0.1:1080
 
 ```
@@ -257,28 +268,29 @@ docker run -d \
 
 ```bash
 docker run -it \
-	--network "container:tun2proxy" \
-	ubuntu:latest
+ --network "container:tun2proxy" \
+ ubuntu:latest
 ```
 
 这样，工作容器就可以访问 tun2proxy 容器的网络了。
 
 ## 声明
+
 本项目仅供学习，非法使用必追究法律责任，下载后请于24小时内删除。
 
 自行下载所造成任何后果与作者无关!!
 
 ## 致谢
+
 - [Warp Tproxy For Docker](https://github.com/Paper-Dragon/warp-tproxy-for-docker/blob/container-tproxy/README.zh_CN.md)
 - [Cloudflare](cloudflare.com)
 - [MetaCubeX](https://wiki.metacubex.one/config/)
 - [Docker](https://hub.docker.com)
 - Github
 - GFW 🤣
-  - [防火长城GFW](https://wikipredia.net/zh/Great_Firewall_of_China#Campaigns_and_crackdowns) 
+  - [防火长城GFW](https://wikipredia.net/zh/Great_Firewall_of_China#Campaigns_and_crackdowns)
   - [金盾工程](https://wikipredia.net/zh/Golden_Shield_Project)
 
-
-
 ## 协议
+
 MIT
